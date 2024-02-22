@@ -1,0 +1,23 @@
+{
+  "AWSEBDockerrunVersion": 2,
+  "containerDefinitions": [
+    {
+      "name": "customer-api",
+      "image": "axmayn/customer-api:latest",
+      "environment": [
+        {
+          "name": "SPRING_DATASOURCE_URL",
+          "value": "jdbc:postgresql://awseb-e-4cvfebe94q-stack-awsebrdsdatabase-hmtnp2tfuvxf .ch4402wiyk48.ap-south-1.rds.amazonaws.com:5432/customer"
+        }
+      ],
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 8080
+        }
+      ],
+      "essential": true,
+      "memory": 512
+    }
+  ]
+}

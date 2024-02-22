@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+    <changeSet id="v1_0_2_alter_table" author="axmayn">
+        <sql>
+            ALTER TABLE public.customer
+            ADD CONSTRAINT unique_emails UNIQUE (email);
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>
