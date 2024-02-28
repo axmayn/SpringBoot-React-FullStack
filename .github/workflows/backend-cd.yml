@@ -47,7 +47,7 @@ jobs:
       - name: build package push with maven
         run: mvn -ntp -B verify -Ddocker.image.tag=${{steps.build-number.outputs.BUILD_NUMBER}} jib:build
       - name: Update Dockerrun.aws.json file with latest tag
-        run:
+        run: | 
           echo "before update dockerrun file"
           cat Dockerrun.aws.json
           sed -i -E 's_(axmayn/customer-api:)([^"]*)_\1'${{steps.build-number.outputs.BUILD_NUMBER}}'_' Docker.aws.json
