@@ -10,4 +10,5 @@ public class PingPongController{
     PingPong getPingPong(){
         return new PingPong("Pong");
     }
+    
 }
