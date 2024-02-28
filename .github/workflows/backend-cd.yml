@@ -50,7 +50,7 @@ jobs:
         run: | 
           echo "before update dockerrun file"
           cat Dockerrun.aws.json
-          sed -i -E 's_(axmayn/customer-api:)([^"]*)_\1'${{steps.build-number.outputs.BUILD_NUMBER}}'_' Docker.aws.json
+          sed -i -E 's_(axmayn/customer-api:)([^"]*)_\1'${{steps.build-number.outputs.BUILD_NUMBER}}'_' Dockerrun.aws.json
           echo "after updating for dockerrun file"
           cat Dockerrun.aws.json
       - name: Deploy to EB
