@@ -2,7 +2,7 @@ package com.axmayn.customer;
 
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -29,7 +29,7 @@ public class CustomerController {
     {
         customerService.addCustomer(customerRegistrationRequest);
     }
-import org.springframework.web.bind.annotation.*;
+
     @DeleteMapping("/{id}")
     public void deleteCustomer(@PathVariable("id") Integer id){
         customerService.removeCustomer(id);
