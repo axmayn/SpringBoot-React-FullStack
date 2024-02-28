@@ -7,7 +7,7 @@
       "environment": [
         {
           "name": "SPRING_DATASOURCE_URL",
-          "value": "jdbc:postgresql://awseb-e-4cvfebe94q-stack-awsebrdsdatabase-hmtnp2tfuvxf .ch4402wiyk48.ap-south-1.rds.amazonaws.com:5432/customer"
+          "value": "jdbc:postgresql://awseb-e-4cvfebe94q-stack-awsebrdsdatabase-hmtnp2tfuvxf.ch4402wiyk48.ap-south-1.rds.amazonaws.com:5432/customer"
         }
       ],
       "portMappings": [
