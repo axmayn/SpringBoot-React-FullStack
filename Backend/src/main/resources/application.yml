@@ -29,6 +29,10 @@ server:
     include-stacktrace: never
     include-message: always
 
+cors:
+  allowed-origins: "*"
+  allowed-methods: "*"
+
 logging:
   level:
     liquibase: INFO
