@@ -3,7 +3,7 @@
   "containerDefinitions": [
     {
       "name": "customer-api",
-      "image": "axmayn/customer-api:06.03.2024.07.41.18",
+      "image": "axmayn/customer-api:08.03.2024.06.56.49",
       "environment": [
         {
           "name": "SPRING_DATASOURCE_URL",
