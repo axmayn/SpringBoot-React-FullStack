@@ -38,9 +38,13 @@ public class Customer
     )
     private Integer age;
 
-    public Customer(String name, String email, Integer age) {
+    @Column(nullable = false)
+    private String gender;
+
+    public Customer(String name, String email, Integer age, String gender) {
         this.name = name;
         this.email = email;
         this.age = age;
+        this.gender = gender;
     }
 }

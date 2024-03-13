@@ -29,7 +29,7 @@ public class Main {
         Random random = new Random();
         Integer age = random.nextInt(16, 50);
 
-        Customer aman = new Customer(faker.name().name(), faker.internet().safeEmailAddress(), age);
+        Customer aman = new Customer(faker.name().name(), faker.internet().safeEmailAddress(), age, "male");
 
         return args -> {
             customerReposiory.save(aman);

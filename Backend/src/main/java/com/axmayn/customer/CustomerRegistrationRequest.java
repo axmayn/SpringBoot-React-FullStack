@@ -1,4 +1,4 @@
 package com.axmayn.customer;
 
-public record CustomerRegistrationRequest(String name, String email, Integer age) {
+public record CustomerRegistrationRequest(String name, String email, Integer age, String gender) {
 }

@@ -14,7 +14,7 @@ public class CustomerService {
     private final CustomerDao customerDao;
 
 
-    public CustomerService(@Qualifier("JDBCTempl")CustomerDao customerDao) {
+    public CustomerService(@Qualifier("jpa")CustomerDao customerDao) {
         this.customerDao = customerDao;
     }
 
@@ -40,7 +40,8 @@ public class CustomerService {
         Customer customer = new Customer(
                 customerRegistrationRequest.name(),
                 customerRegistrationRequest.email(),
-                customerRegistrationRequest.age()
+                customerRegistrationRequest.age(),
+                customerRegistrationRequest.gender()
         );
 
         customerDao.insertCustomer(customer);
@@ -64,6 +65,7 @@ public class CustomerService {
 
         customer.setName(customerUpdateRequest.name());
         customer.setAge(customerUpdateRequest.age());
+        customer.setGender(customerUpdateRequest.gender());
 
         customerDao.insertCustomer(customer);
     }

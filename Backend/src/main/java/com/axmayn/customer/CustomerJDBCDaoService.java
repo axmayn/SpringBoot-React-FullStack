@@ -53,11 +53,11 @@ public class CustomerJDBCDaoService implements CustomerDao{
 
         var sql = """
                 INSERT INTO public.customer
-                (name, email, age)
+                (name, email, age, gender)
                 values (?, ?, ?)
                 """;
 
-        jdbcTemplate.update(sql, new Object[]{customer.getName(), customer.getEmail(), customer.getAge()});
+        jdbcTemplate.update(sql, new Object[]{customer.getName(), customer.getEmail(), customer.getAge(), customer.getGender()});
 
     }
 
