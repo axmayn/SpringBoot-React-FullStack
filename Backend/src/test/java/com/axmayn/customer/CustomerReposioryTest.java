@@ -34,7 +34,7 @@ class CustomerReposioryTest extends AbstractContainerTest{
 
     @Test
     void existsCustomerByEmail() {
-        Customer c = new Customer(faker.name().name(), faker.internet().emailAddress() + "_" + UUID.randomUUID(), random.nextInt(16, 50));
+        Customer c = new Customer(faker.name().name(), faker.internet().emailAddress() + "_" + UUID.randomUUID(), random.nextInt(16, 50), "female");
 
         underTest.save(c);
 

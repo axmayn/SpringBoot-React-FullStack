@@ -29,7 +29,7 @@ public class customerIntegrationTest{
         String email = name + UUID.randomUUID() + "@gmail.com";
         Integer age = 24;
 
-        CustomerRegistrationRequest request = new CustomerRegistrationRequest(name, email, age);
+        CustomerRegistrationRequest request = new CustomerRegistrationRequest(name, email, age, "female");
 
         webTestClient.post()
                 .uri("/api/v1/customers/")
@@ -51,7 +51,7 @@ public class customerIntegrationTest{
                 .returnResult()
                 .getResponseBody();
 
-        Customer expectedCustomer = new Customer(name, email, age);
+        Customer expectedCustomer = new Customer(name, email, age, "female");
 
         assertThat(allCustomers)
                 .usingRecursiveFieldByFieldElementComparatorIgnoringFields("id")

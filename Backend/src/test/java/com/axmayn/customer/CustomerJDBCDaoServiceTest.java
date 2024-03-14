@@ -23,9 +23,9 @@ class CustomerJDBCDaoServiceTest extends AbstractContainerTest {
     Faker faker = new Faker();
     Random random = new Random();
 
-    Customer c1 = new Customer(faker.name().name(), faker.internet().emailAddress() + "_" + UUID.randomUUID(), random.nextInt(16, 50));
-    Customer c2 = new Customer(faker.name().name(), faker.internet().emailAddress()+ "_" + UUID.randomUUID(), random.nextInt(16, 50));
-    Customer c3 = new Customer(faker.name().name(), faker.internet().emailAddress()+ "_" + UUID.randomUUID(), random.nextInt(16, 50));
+    Customer c1 = new Customer(faker.name().name(), faker.internet().emailAddress() + "_" + UUID.randomUUID(), random.nextInt(16, 50), "female");
+    Customer c2 = new Customer(faker.name().name(), faker.internet().emailAddress()+ "_" + UUID.randomUUID(), random.nextInt(16, 50), "female");
+    Customer c3 = new Customer(faker.name().name(), faker.internet().emailAddress()+ "_" + UUID.randomUUID(), random.nextInt(16, 50), "female");
 
 
     @BeforeEach
@@ -50,7 +50,7 @@ class CustomerJDBCDaoServiceTest extends AbstractContainerTest {
     @Test
     void findCustomerById() {
 
-        Customer c4 = new Customer(faker.name().name(), faker.internet().emailAddress()+ "_" + UUID.randomUUID(), random.nextInt(16, 50));
+        Customer c4 = new Customer(faker.name().name(), faker.internet().emailAddress()+ "_" + UUID.randomUUID(), random.nextInt(16, 50), "female");
         underTest.insertCustomer(c4);
 
         Integer id = underTest.findAllCustomer()
@@ -72,7 +72,7 @@ class CustomerJDBCDaoServiceTest extends AbstractContainerTest {
     @Test
     void insertCustomer() {
 
-        Customer c5 = new Customer(faker.name().name(), faker.internet().emailAddress()+ "_" + UUID.randomUUID(), random.nextInt(16, 50));
+        Customer c5 = new Customer(faker.name().name(), faker.internet().emailAddress()+ "_" + UUID.randomUUID(), random.nextInt(16, 50), "female");
 
         underTest.insertCustomer(c5);
 

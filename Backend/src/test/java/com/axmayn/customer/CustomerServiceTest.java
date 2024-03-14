@@ -44,7 +44,7 @@ class CustomerServiceTest {
     @Test
     void getCustomerbyId() {
         Integer id = 5;
-        Customer customer = new Customer(id, "aman", "axmayn@gmail.com", 24);
+        Customer customer = new Customer(id, "aman", "axmayn@gmail.com", 24, "female");
 
         when(customerDao.findCustomerById(id)).thenReturn(Optional.of(customer));
 
@@ -69,7 +69,7 @@ class CustomerServiceTest {
     @Test
     void addCustomer() {
         CustomerRegistrationRequest customerRegistrationRequest =
-                new CustomerRegistrationRequest("aman", "axmayn@gm", 16);
+                new CustomerRegistrationRequest("aman", "axmayn@gm", 16, "female");
          when(customerDao.existByEmail(customerRegistrationRequest.email()))
                  .thenReturn(false);
 
@@ -91,7 +91,7 @@ class CustomerServiceTest {
     {
         String email = "axmayn@gm";
         CustomerRegistrationRequest customerRegistrationRequest =
-                new CustomerRegistrationRequest("aman", email, 16);
+                new CustomerRegistrationRequest("aman", email, 16, "female");
 
 
         when(customerDao.existByEmail(email)).thenReturn(true);
